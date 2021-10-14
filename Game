@@ -1,0 +1,85 @@
+# Welcome to the game
+
+import random
+
+
+# Program starts
+print("""Welcome to the game
+
+
+...write something""")
+
+command = ""
+game_started = False
+game_stopped = False
+while True:
+    command = input("> ").lower()
+
+# Program of ending 1
+    if command == "start":
+        if game_started:
+            print("there is no end")
+            print("Ending 1 of 3, it may seem that the game has ended")
+            break
+        else:
+            game_started = True
+            print("""
+        So you have decided to play our little game,
+haha....
+don't stop
+""")
+
+# Program of ending 2
+    elif command == "stop":
+        if game_stopped:
+            print("don't try to stop the game")
+            print("Ending 2 of 3, somehow saying stop stops the game")
+            break
+        else:
+            game_stopped = True
+            print("""
+The game will never stop
+""")
+
+# Program info
+    elif command == "info":
+        print("There are 3 endings, 1 game, 1 secret ending")
+        break
+
+# Program play
+    elif command == "play":
+        print("You got a randum number", random.randint(1, 1000))
+        break
+
+# Program secret
+    elif command == "secret":
+        print("It has something to do with quit")
+        break
+
+# Program secret ending
+    elif command == "fuk":
+        print("No Swering")
+        print("Secret ending")
+        break
+
+# Program ending 3
+    elif command == "quit":
+        print("Fuk")
+        print("Ending 3 of 3")
+        break
+
+# Program help
+    elif command == "help":
+        print("""start - start the game
+stop - stop the game
+quit - to quit
+secret - secret ending
+play - play a game
+info - info of game""")
+    else:
+        print("Sorry, I don't understand that, use help")
+
+# End of program
+
+# Made by Edward Vukovac
+# 2021/10/14
